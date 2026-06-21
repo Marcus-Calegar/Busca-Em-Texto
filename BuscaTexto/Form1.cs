@@ -125,9 +125,12 @@ namespace BuscaTexto {
             this.totalOcorrencias = this.posicoes.Count;
 
             if(this.totalOcorrencias == 0) {
+                lblOcorrencia.Visible = false;
                 MessageBox.Show("Nenhuma ocorrencia encontrada!");
                 return;
             }
+            lblOcorrencia.Visible = true;
+            lblOcorrencia.Text = $"Ocorrencia 0 de {totalOcorrencias}";
 
             this.ocorrenciaAtual = 0;
             ColorirTexto(this.posicoes, this.padrao.Length, this.ocorrenciaAtual);
@@ -157,6 +160,7 @@ namespace BuscaTexto {
                 return;
             }
             this.ocorrenciaAtual = (this.ocorrenciaAtual + 1) % this.totalOcorrencias;
+            lblOcorrencia.Text = $"Ocorrencia {ocorrenciaAtual+1} de {totalOcorrencias}";
 
             this.ColorirTexto(this.posicoes, this.padrao.Length, this.ocorrenciaAtual);
             texto.Select(this.posicoes[this.ocorrenciaAtual], this.padrao.Length);
@@ -169,6 +173,7 @@ namespace BuscaTexto {
                 return;
             }
             this.ocorrenciaAtual = (this.ocorrenciaAtual - 1 + this.totalOcorrencias) % this.totalOcorrencias;
+            lblOcorrencia.Text = $"Ocorrencia {ocorrenciaAtual + 1} de {totalOcorrencias}";
 
             this.ColorirTexto(this.posicoes, this.padrao.Length, this.ocorrenciaAtual);
             texto.Select(this.posicoes[this.ocorrenciaAtual], this.padrao.Length);

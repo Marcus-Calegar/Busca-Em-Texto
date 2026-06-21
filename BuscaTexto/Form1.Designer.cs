@@ -39,6 +39,7 @@
             this.texto = new System.Windows.Forms.RichTextBox();
             this.btnProx = new System.Windows.Forms.Button();
             this.btnAnt = new System.Windows.Forms.Button();
+            this.lblOcorrencia = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -105,28 +106,28 @@
             // forçaBrutaToolStripMenuItem
             // 
             this.forçaBrutaToolStripMenuItem.Name = "forçaBrutaToolStripMenuItem";
-            this.forçaBrutaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.forçaBrutaToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.forçaBrutaToolStripMenuItem.Text = "Força Bruta";
             this.forçaBrutaToolStripMenuItem.Click += new System.EventHandler(this.forçaBrutaToolStripMenuItem_Click);
             // 
             // rabinKarpToolStripMenuItem
             // 
             this.rabinKarpToolStripMenuItem.Name = "rabinKarpToolStripMenuItem";
-            this.rabinKarpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.rabinKarpToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.rabinKarpToolStripMenuItem.Text = "Rabin-Karp";
             this.rabinKarpToolStripMenuItem.Click += new System.EventHandler(this.rabinKarpToolStripMenuItem_Click);
             // 
             // kMPToolStripMenuItem
             // 
             this.kMPToolStripMenuItem.Name = "kMPToolStripMenuItem";
-            this.kMPToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.kMPToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.kMPToolStripMenuItem.Text = "KMP";
             this.kMPToolStripMenuItem.Click += new System.EventHandler(this.kMPToolStripMenuItem_Click);
             // 
             // boyerMooreToolStripMenuItem
             // 
             this.boyerMooreToolStripMenuItem.Name = "boyerMooreToolStripMenuItem";
-            this.boyerMooreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.boyerMooreToolStripMenuItem.Size = new System.Drawing.Size(144, 22);
             this.boyerMooreToolStripMenuItem.Text = "Boyer-Moore";
             this.boyerMooreToolStripMenuItem.Click += new System.EventHandler(this.boyerMooreToolStripMenuItem_Click);
             // 
@@ -141,7 +142,7 @@
             // sobreToolStripMenuItem
             // 
             this.sobreToolStripMenuItem.Name = "sobreToolStripMenuItem";
-            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sobreToolStripMenuItem.Size = new System.Drawing.Size(113, 22);
             this.sobreToolStripMenuItem.Text = "S&obre...";
             this.sobreToolStripMenuItem.Click += new System.EventHandler(this.sobreToolStripMenuItem_Click);
             // 
@@ -176,11 +177,24 @@
             this.btnAnt.UseVisualStyleBackColor = true;
             this.btnAnt.Click += new System.EventHandler(this.btnAnt_Click);
             // 
+            // lblOcorrencia
+            // 
+            this.lblOcorrencia.AutoSize = true;
+            this.lblOcorrencia.BackColor = System.Drawing.Color.Transparent;
+            this.lblOcorrencia.Location = new System.Drawing.Point(284, 5);
+            this.lblOcorrencia.Name = "lblOcorrencia";
+            this.lblOcorrencia.Size = new System.Drawing.Size(92, 13);
+            this.lblOcorrencia.TabIndex = 4;
+            this.lblOcorrencia.Text = "Ocorrencia 0 de 0";
+            this.lblOcorrencia.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblOcorrencia.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(567, 454);
+            this.Controls.Add(this.lblOcorrencia);
             this.Controls.Add(this.btnAnt);
             this.Controls.Add(this.btnProx);
             this.Controls.Add(this.texto);
@@ -214,6 +228,7 @@
         private System.Windows.Forms.ToolStripMenuItem boyerMooreToolStripMenuItem;
         private System.Windows.Forms.Button btnProx;
         private System.Windows.Forms.Button btnAnt;
+        private System.Windows.Forms.Label lblOcorrencia;
     }
 }
 
